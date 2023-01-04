@@ -3,11 +3,12 @@ let timeRef = document.querySelector(".timer-display");
 let int = null;
 // I was having problem here
 // I tried it with other keys thats why it for down arrow
-if (keyCode === DOWN_ARROW){
+if (keyDown("SPACE")){
     if(int !== null) {
         clearInterval(int);
     }
     int = setInterval(displayTimer, 10);
+    console.log("hi")
 };
 
 document.getElementById("pause-timer").addEventListener("click", () => {
